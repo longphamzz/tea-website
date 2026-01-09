@@ -11,6 +11,9 @@
     <link href="./dist/output.css" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="./css/responsive-tabs.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+
     <!-- Add the slick-theme.css if you want default styling -->
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
@@ -34,6 +37,8 @@
         defer></script>
     <script src="./js/animated-counter-prograssbar.js" defer></script>
     <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js" defer></script>
+    <script src="./js/jquery.filterjitsu.min.js" defer></script>
+    <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script defer type="module" src="./js/main.js"></script>
 </head>
 
@@ -71,16 +76,17 @@
      <section id="products">
         <main class="container mt-20">
             <!-- banner -->
-            <img src="./assets/banners/banner1.jpg" alt="products banner" class="w-full h-[350px] object-cover shadow-xl">
+            <img data-aos="flip-up" src="./assets/banners/banner1.jpg" alt="products banner" class="w-full h-[350px] object-cover shadow-xl">
+            
             <!-- tiêu đề  -->
              <div class="mt-4 md:mt-9">
-                <div>
+                <div data-aos="fade-right">
                     <h2 class="sub_heading">Shop with us</h2>
                     <h1 class="main_heading">Tất cả sản phẩm</h1>
                 </div>
-                <p class="max-w-lg mt-2 text-xs text-n-500">
+                <p data-aos="fade-right" data-aos-delay="100" class="max-w-lg mt-2 text-xs text-n-500">
                     Cho dù bạn là người đam mê trà lâu năm hay mới bước chân vào thế giới trà, chúng tôi ở đây để giúp bạn khám phá loại trà pha trộn yêu thích tiếp theo của mình. Khám phá bộ sưu tập của chúng tôi và trải nghiệm nghệ thuật pha trà trong từng ngụm.
-                </p>
+                </p> 
              </div>
 
              <!-- filter tabs -->
@@ -91,14 +97,20 @@
              
                   <a id="f-white" href="?filter-category=whitetea"><span class="hidden md:inline">Trà</span> trắng </a>
              
-                   <a id="f-oolong" href="?filter-category=oolongtea"><span class="hidden md:inline">Trà</span> ô long </a>
+                   <a id="f-oolong" href="?filter-category=oolong"><span class="hidden md:inline">Trà</span> ô long </a>
              
                     <a id="f-matcha" href="?filter-category=matcha"> <span class="hidden md:inline">Trà</span> matcha </a>
              
             </div>
 
             <!-- sản phẩm  -->
-             
+             <section id="product-wrapper">
+                <div class="mt-9">
+                    <div id="product-items--container" class="grid grid-cols-3 gap-4 md:grid-cols-6 lg:grid-cols-12">
+                       
+                    </div>
+                </div>
+             </section>
         </main>
      </section>
 
